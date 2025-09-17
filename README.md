@@ -9,7 +9,7 @@ A simple travel blog website built with React + Vite.
 - Footer with contact + social links
 
 ## Deployment
-- GitHub Repo: https://github.com/nagarishitaupputuri2007/travel-blog
+- GitHub Repo: github.com/nagarishitaupputuri2007/travel-blog(https://github.com/nagarishitaupputuri2007/travelblog)
 - Live Site: [Add your Vercel/Netlify link here]
 
 ---
