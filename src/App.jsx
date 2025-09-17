@@ -2,51 +2,63 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import BlogCard from "./components/BlogCard";
+import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
-  const blogs = [
-    {
-      id: 1,
-      title: "Exploring the Mountains",
-      description: "A journey through the scenic landscapes and peaks.",
-      image: "https://source.unsplash.com/600x400/?mountains,travel",
-    },
-    {
-      id: 2,
-      title: "Beach Vibes",
-      description: "Relaxing at the shores with golden sand and waves.",
-      image: "https://source.unsplash.com/600x400/?beach,travel",
-    },
-    {
-      id: 3,
-      title: "City Adventures",
-      description: "Exploring culture, food, and architecture in bustling cities.",
-      image: "https://source.unsplash.com/600x400/?city,travel",
-    },
-  ];
-
+const App = () => {
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col">
+    <div className="font-sans">
+      {/* Navbar */}
       <Navbar />
-      <Hero />
-      <About />
-      <section className="py-12 px-6 md:px-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-          ✈️ Latest Travel Blogs
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
-            <BlogCard key={blog.id} {...blog} />
-          ))}
+
+      {/* Hero Section */}
+      <section
+        id="home"
+        className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-24 px-6 md:px-20 shadow-lg text-center"
+      >
+        <Hero />
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="bg-gradient-to-r from-yellow-100 via-orange-100 to-yellow-200 py-20 px-6 md:px-20"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <About />
         </div>
       </section>
-      <Contact />
-      <Footer />
+
+      {/* Blog Section */}
+      <section
+        id="blog"
+        className="bg-gradient-to-r from-pink-100 via-red-100 to-pink-200 py-20 px-6 md:px-20"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12 drop-shadow-lg">
+            ✍️ Blog Posts
+          </h2>
+          <Blog />
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="bg-gradient-to-r from-green-100 via-teal-100 to-green-200 py-20 px-6 md:px-20"
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <Contact />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-6 text-center">
+        <Footer />
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
