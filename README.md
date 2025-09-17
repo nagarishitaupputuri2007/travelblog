@@ -17,3 +17,4 @@ A simple travel blog website built with React + Vite.
 ## Submission
 - Zip the folder as `travelblog_Nagarishitaupputuri.zip`
 - Exclude the `node_modules` folder before submission
+ok
